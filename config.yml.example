@@ -1,0 +1,4 @@
+ZYPR:
+  base_domain: pais-dev.zypr.net
+  version: 2
+  api_key: API_KEY_GOES_HERE
