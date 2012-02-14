@@ -8,3 +8,10 @@ SimpleCov.start
 
 require 'zypr'
 require 'rspec'
+
+CONFIG = YAML.load(File.read("config.yml"))["ZYPR"]
+
+# Debug output
+class Zypr
+  debug_output $stdout
+end
