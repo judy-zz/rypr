@@ -6,12 +6,14 @@ major, minor, patch = RUBY_VERSION.split('.')
 require 'simplecov'
 SimpleCov.start
 
-require 'zypr'
+require 'rypr'
 require 'rspec'
 
 CONFIG = YAML.load(File.read("config.yml"))["ZYPR"]
 
 # Debug output
-class Zypr
-  debug_output $stdout
+module Rypr
+  class Connection
+    debug_output $stdout
+  end
 end
