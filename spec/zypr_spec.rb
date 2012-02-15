@@ -1,15 +1,19 @@
 require 'spec_helper'
 
 describe Zypr do
-  # # This needs to be mocked out with VCR. It can't be
-  # # tested via the API every time.
-  # describe '#create_user' do
-  #   context "with correct username and password" do
-  #     it "should return true" do
-  #       Zypr.create_user("clintononon@j-udy.com", "password").should == true
-  #     end
-  #   end
-  # end
+  # This needs to be mocked out with VCR. It can't be
+  # tested via the API every time.
+  describe '#create_user' do
+    context "with correct username and password" do
+      before do
+        @username = "tester+#{rand(5000)}@j-udy.com"
+        @password = "password"
+      end
+      it "should return true" do
+        Zypr.create_user(@username, @password).should == true
+      end
+    end
+  end
 
   describe '.new' do
     before(:each) do
@@ -18,6 +22,10 @@ describe Zypr do
 
     it "should return a new Zypr object" do
       @result.should be_an_instance_of(Zypr)
+    end
+
+    specify "the Zypr object should have a token" do
+      @result.token.should_not be_nil
     end
   end
 

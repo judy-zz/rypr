@@ -1,11 +1,7 @@
+---
 ZYPR:
   base_domain: pais-dev.zypr.net
   version: 2
-  app:
-    api_key: API_KEY_GOES_HERE
-    username: USERNAME_GOES_HERE
-    password: PASSWORD_GOES_HERE
-  test:
-  	<%# create an actual user account by hand, and put it here%>
-  	username: USERNAME_GOES_HERE
-  	password: PASSWORD_GOES_HERE
+  api_key: API_KEY_GOES_HERE
+  app:  {username: USERNAME_GOES_HERE, password: PASSWORD_GOES_HERE}
+  test: {username: USERNAME_GOES_HERE, password: PASSWORD_GOES_HERE}
